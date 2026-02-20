@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="container">
-        <div class="nav">
+        <nav>
             <div class="top_nav">
                 <img class="list_icon_nav" src="images/magnify.svg" alt="Search">
                 <div class="search_bar"></div>
@@ -17,16 +17,20 @@
                 <p>Morgan Oakley</p>
             </div>
             <div class="bottom_nav">
-                <p>profile picture placeholder</p>
                 <div>
-                    <p>Hi there,</p>
-                    <p>Morgan Oakley (@morgan)</p>
+                    <div class="profile_circle"><img class="profile_picture" src="images/frogpfp.svg" alt="Frog"></div>
+                    <div class="text">
+                        <p>Hi there, </p>
+                        <p>Morgan Oakley (@morgan)</p>
+                    </div>
                 </div>
-                <button>New</button>
-                <button>Upload</button>
-                <button>Share</button>
+                <div>
+                    <button>New</button>
+                    <button>Upload</button>
+                    <button>Share</button>
+                </div>
             </div>
-        </div>
+        </nav>
         <div class="sidebar">
             <div class="sidebar_title">
                 <img class="dashboard" src="images/view-dashboard.svg" alt="Dashboard">
@@ -47,59 +51,71 @@
             </ul>
         </div>
         <div class="main_container">
+            <p class="title">Your Projects</p>
             <div class="projects">
-                <p>Your Projects</p>
                 <div class="card">
                     <p>Super Cool Project</p>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                         sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim.</p>
-                    <p>star icon</p>
-                    <p>eye icon</p>
-                    <p>share icon</p>
+                    <ul class="card_icons">
+                        <li><img class="card_icon" src="images/star-plus-outline.svg" alt="fav"></li>
+                        <li><img class="card_icon" src="images/eye-plus-outline.svg" alt="views"></li>
+                        <li><img class="card_icon" src="images/source-fork.svg" alt="share"></li>
+                    </ul>
                 </div>
                 <div class="card">
                     <p>Less Cool Project</p>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                         sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim.</p>
-                    <p>star icon</p>
-                    <p>eye icon</p>
-                    <p>share icon</p>
+                    <ul class="card_icons">
+                        <li><img class="card_icon" src="images/star-plus-outline.svg" alt="fav"></li>
+                        <li><img class="card_icon" src="images/eye-plus-outline.svg" alt="views"></li>
+                        <li><img class="card_icon" src="images/source-fork.svg" alt="share"></li>
+                    </ul>
                 </div>
                 <div class="card">
                     <p>Impossible App</p>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                         sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim.</p>
-                    <p>star icon</p>
-                    <p>eye icon</p>
-                    <p>share icon</p>
+                    <ul class="card_icons">
+                        <li><img class="card_icon" src="images/star-plus-outline.svg" alt="fav"></li>
+                        <li><img class="card_icon" src="images/eye-plus-outline.svg" alt="views"></li>
+                        <li><img class="card_icon" src="images/source-fork.svg" alt="share"></li>
+                    </ul>
                 </div>
                 <div class="card">
                     <p>Easy Peasy App</p>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                         sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim.</p>
-                    <p>star icon</p>
-                    <p>eye icon</p>
-                    <p>share icon</p>
+                    <ul class="card_icons">
+                        <li><img class="card_icon" src="images/star-plus-outline.svg" alt="fav"></li>
+                        <li><img class="card_icon" src="images/eye-plus-outline.svg" alt="views"></li>
+                        <li><img class="card_icon" src="images/source-fork.svg" alt="share"></li>
+                    </ul>
                 </div>
                 <div class="card">
                     <p>Ad Blocker</p>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                         sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim.</p>
-                    <p>star icon</p>
-                    <p>eye icon</p>
-                    <p>share icon</p>
+                    <ul class="card_icons">
+                        <li><img class="card_icon" src="images/star-plus-outline.svg" alt="fav"></li>
+                        <li><img class="card_icon" src="images/eye-plus-outline.svg" alt="views"></li>
+                        <li><img class="card_icon" src="images/source-fork.svg" alt="share"></li>
+                    </ul>
                 </div>
                 <div class="card">
                     <p>Money Maker</p>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                         sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim.</p>
-                    <p>star icon</p>
-                    <p>eye icon</p>
-                    <p>share icon</p>
+                    <ul class="card_icons">
+                        <li><img class="card_icon" src="images/star-plus-outline.svg" alt="fav"></li>
+                        <li><img class="card_icon" src="images/eye-plus-outline.svg" alt="views"></li>
+                        <li><img class="card_icon" src="images/source-fork.svg" alt="share"></li>
+                    </ul>
                 </div>
             </div>
+            <p class="title">Announcements</p>
             <div class="announcements">
-                Announcements
                 <div class="side_container">
                     <p>Site Maintenance</p>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
@@ -112,13 +128,37 @@
                         sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim.</p>
                 </div>
             </div>
+            <p class="trending_title">Trending</p>
             <div class="trending">
-                Trending
                 <div class="side_container">
-                    <p>@tegan</p>
-                    <p>@morgan</p>
-                    <p>@kendall</p>
-                    <p>@alex</p>
+                    <div class="trending_block">
+                        <div class="profile_circle_pink"><img class="profile_picture" src="images/coffee-cup.svg" alt="Coffee"></div>
+                        <div>
+                            <p>@tegan</p>
+                            <p>World Peace Builder</p>
+                        </div>
+                    </div>
+                    <div class="trending_block">
+                        <div class="profile_circle"><img class="profile_picture" src="images/frogpfp.svg" alt="frog"></div>
+                        <div>
+                            <p>@morang</p>
+                            <p>Super Cool Project</p>
+                        </div>
+                    </div>
+                    <div class="trending_block">
+                        <div class="profile_circle_red"><img class="profile_picture" src="images/cute.svg" alt="cat"></div>
+                        <div>
+                            <p>@kendall</p>
+                            <p>Life Changing App</p>
+                        </div>
+                    </div>                    
+                    <div class="trending_block">
+                        <div class="profile_circle_blue"><img class="profile_picture" src="images/kitty.svg" alt="kitty"></div>
+                        <div>
+                            <p>@alex</p>
+                            <p>No Traffic Maker</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
