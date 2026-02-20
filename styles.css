@@ -16,6 +16,7 @@ body {
 .container {
     display: grid;
     grid-template-columns: 1fr 5fr;
+    min-height: 100vh;
 }
 
 .sidebar {
@@ -25,14 +26,19 @@ body {
     background-color: #1992d4;
 
     display: grid;
+    grid-template-rows: 150px 400px 1fr;
 }
 
 .sidebar_title {
     font-size: 2rem;
+    align-self: flex-start;
+    justify-items: flex-start;
     color: white;
     font-weight: bold;
     display: flex;
     align-items: center;
+    padding: 1.25rem;
+    gap: 1.25rem;
 }
 
 .sidebar ul li {
@@ -40,7 +46,7 @@ body {
     font-size: 1.5rem;
     font-weight: bold;
     color: white;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     display: flex;
     align-items: flex-end;
     
@@ -49,25 +55,38 @@ body {
 nav {
     box-sizing: border-box;
     grid-column: 2;
+    padding: 10px 3rem;
 }
 
 .top_nav {
+    margin-top: 10px;
     box-sizing: border-box;
-    display: flex;
-    padding: 0 2rem;
-    font-size: 1.5rem;
-    font-weight: bold;
     justify-content: space-between;
+    display: flex;
+    font-size: 1rem;
+    font-weight: bold;
     align-items: center;
+}
+
+.top_nav > .left_nav_icons {
+    display: flex;
+    align-items: center;
+    min-width: 60vw;
+    gap: 2rem;
+}
+
+.top_nav > .right_nav_icons {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
 }
 
 .bottom_nav {
     box-sizing: border-box;
     display: flex;
-    padding: 0 2rem;
     justify-content: space-between;
     align-items: center;
-    margin: 1rem 0; 
+    margin-top: 10px;
 }
 
 .bottom_nav > div {
@@ -75,12 +94,13 @@ nav {
     gap: 2rem
 }
 
-.bottom_nav > div > .text {
-    font-weight: bolder;
+.bottom_nav > div > .text p:first-of-type {
+    margin-bottom: 4px;
 }
 
 .bottom_nav > div > .text p:last-of-type {
     font-size: 1.5rem;
+    font-weight: bolder;
     margin-top: 0;
 }
 
@@ -88,11 +108,12 @@ nav {
     background-color: #1992d4;
     color: white;
     border-radius: 5rem;
-    font-size: 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    outline: none;
     border: 0;
-    width: 10rem;
-    padding: 0.5rem 0;
-    margin: 1rem 0;
+    padding: 1rem;
+    width: 150px;
 }
 
 .main_container {
@@ -103,9 +124,8 @@ nav {
     grid-column: 2;
 
     grid-template-columns: 3fr 1fr;
-    grid-template-rows: 60px 2fr 60px 1fr ;
-    align-items: center;
-    padding: 1.5rem;
+    grid-template-rows: 50px 1fr 50px 1fr ;
+    padding: 2rem;
 
     background-color: #E2E8F0;
 }
@@ -149,10 +169,8 @@ nav {
     grid-template-columns: 1fr 1fr;
     grid-row: 2 / 5;
     grid-column: 1 / 2;
-    position: absolute;
-    top: 0;
-    gap: 1.5rem;
-    margin-right: 1.5rem;
+    column-gap: 2rem;
+    margin-right: 2rem;
 }
 
 .main_container > .title {
@@ -161,39 +179,42 @@ nav {
     font-size: 1.5rem;
     margin: 0;
     font-weight: bold;
+    align-self: center;
 }
 
-.main_container > .trending_title {
-    grid-row: 3;
-    grid-column: 2;
+.trending_title {
+    box-sizing: border-box;
+    align-self: center;
+    grid-row: 3 / 4;
+    grid-column: 2 / 3;
     font-size: 1.5rem;
-    margin: 0;
     font-weight: bold;
 }
 
 .main_container > * > .side_container {
     box-sizing: border-box;
     background-color: white;
-    padding: 1.5rem;
+    padding: 1rem 1.5rem;
     border-radius: 10px;
     box-shadow: 3px 4px 3px rgb(100, 100, 100, 20%);
 }
 
 .announcements {
-    grid-column: 2;
-    grid-row: 2;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
 }
 
 .announcements > .side_container p:nth-child(2n+1) {
     font-weight: bold;
-    font-size: 1.125rem;
+    font-size: 1rem;
     margin-bottom: 0;
 }
 
 .announcements > .side_container p:nth-child(2n) {
     margin-top: 0;
+    font-size: 14px;
     color: rgb(100, 100, 100);
-    padding-bottom: 1.125rem;
+    padding-bottom: 10px;
 }
 
 .announcements > .side_container p:not(:last-child):not(:nth-child(2n+1)) {
@@ -203,9 +224,8 @@ nav {
 
 .trending {
     box-sizing: border-box;
-    grid-column: 2;
-    grid-row: 4;
-    width: 100%;
+    grid-column: 2 / 3;
+    grid-row: 4 / 5;
     align-self: flex-start;
 }
 
@@ -213,7 +233,7 @@ nav {
     box-sizing: border-box;
     display: flex;
     align-items: center;
-    gap: 1.5rem
+    gap: 1.25rem
 }
 
 .trending_block > div > p:first-of-type {
@@ -253,7 +273,6 @@ nav {
     background-color: #fbbf24; 
     border-radius: 50%;       
     display: flex;        
-    align-items: center;
     justify-content: center;
     overflow: hidden;      
 }
@@ -296,15 +315,16 @@ nav {
 }
 
 .bottom_nav > div > .profile_circle {
-    width: 75px;
-    height: 75px;
+    width: 60px;
+    height: 60px;
+    align-self: center;
 }
 
 .search_bar {
     height: 2.5rem;
     background-color: #E2E8F0;
     border-radius: 30px;
-    flex-grow: 1;
+    flex-basis: 45vw;
 }
 
 .card_icon {
